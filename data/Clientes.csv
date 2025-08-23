@@ -1,0 +1,21 @@
+ID_Cliente,Nome_Cliente,Email_Cliente,Estado_Cliente
+15,André Nascimento,andre.n@email.com,AM
+9,Eduarda Martins,eduarda.m@email.com,BA
+5,Lucas Martins,lucas.m@email.com,BA
+13,Diego Santos,diego.s@email.com,GO
+8,Aline Souza,aline.s@email.com,MG
+4,Daniel Souza,daniel.s@email.com,MG
+14,Larissa Ferreira,larissa.f@email.com,PA
+12,Henrique Alves,henrique.a@email.com,PE
+22,Fernanda Lima,fernanda.l@email.com,PR
+11,Gabriela Lima,gabriela.l@email.com,PR
+7,João Lima,joao.l@email.com,RJ
+2,Bruno Costa,b.costa@email.com,RJ
+23,Gustavo Nogueira,gustavo.n@email.com,RS
+10,Felipe Rocha,felipe.r@email.com,RS
+24,Helena Martins,helena.m@email.com,SC
+16,Patrícia Mendes,patricia.m@email.com,SC
+21,Eduardo Reis,edu.reis@email.com,SP
+6,Fernanda Rocha,fernanda.r@email.com,SP
+3,Carla Dias,carla.d@email.com,SP
+1,Ana Silva,ana.s@email.com,SP
