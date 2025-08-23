@@ -1,0 +1,21 @@
+ID_Produto,Nome_Produto,Categoria_Produto,Preco_Produto
+122,Gestão de Projetos,Administração,130
+124,Estatística Aplicada,Dados,100
+101,Fundamentos de SQL,Dados,60
+109,Machine Learning Essencial,Dados,95
+105,SQL Avançado,Dados,85
+116,Banco de Dados NoSQL,Dados,110
+112,Senhor dos Anéis,Fantasia,120
+123,Senhor dos Anéis,Ficção Científica,80
+102,Duna,Ficção Científica,80.5
+104,O Guia do Mochileiro,Ficção Científica,42
+110,Neuromancer,Ficção Científica,70
+107,O Hobbit,Ficção Científica,70
+113,Introdução ao Cloud Computing,Infraestrutura,130
+121,Python para Iniciantes,Programação,95
+103,Python para Dados,Programação,75
+111,Java para Iniciantes,Programação,65.5
+108,Machine Learning com Python,Programação,110
+106,Inteligência Artificial,Programação,120
+114,Python para Ciência de Dados,Programação,95
+115,Fundamentos de Cibersegurança,Segurança,140
