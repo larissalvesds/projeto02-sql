@@ -1,18 +1,32 @@
--- Estruturando o Armazenamento: CREATE TABLE, tabela Clientes --
--- Este script cria a estrutura do schema no Google BigQuery.
--- Tabelas são criadas com `CREATE OR REPLACE TABLE` para permitir a execução repetida do script.
--- Projeto `t1engenhariadados.turma3_grupo7`.
+-- =============================================================================
+-- SCRIPT DE ESTRUTURAÇÃO DO SCHEMA
+--
+-- Projeto  : `t1engenhariadados.turma3_grupo7`
+-- Ambiente : Google BigQuery
+--
+-- Descrição:
+-- Este script define a estrutura do schema no BigQuery. As tabelas são criadas
+-- utilizando `CREATE OR REPLACE TABLE`, permitindo reexecuções sem erro.
+-- =============================================================================
 
--- Tabela de Clientes
--- Armazena informações únicas de cada cliente.
--- No BigQuery, chaves primárias não são impostas, mas ID_Cliente serve como identificador lógico.
+-- =============================================================================
+-- DEFINIÇÃO DAS TABELAS
+-- Inclui tabelas de dimensão (Clientes, Produtos) e a tabela de fatos (Vendas).
+-- =============================================================================
+
+-- TABELA: Clientes
+-- Descrição: Armazena dados únicos de cada cliente.
+-- Observação: Embora o BigQuery não imponha chaves primárias, o campo ID_Cliente
+--             é utilizado como identificador lógico.
+-- 
+-----------------------------------------------------------------------------
 
 CREATE OR REPLACE TABLE `t1engenhariadados.turma3_grupo7.Clientes` (
     ID_Cliente INT64,
     Nome_Cliente STRING,
     Email_Cliente STRING,
     Estado_Cliente STRING
-)
+);
 
 -- Tabela de Produtos
 -- Armazena informações únicas de cada produto.
@@ -21,8 +35,9 @@ CREATE OR REPLACE TABLE `t1engenhariadados.turma3_grupo7.Produtos` (
     Nome_Produto STRING,
     Categoria_Produto STRING,
     Preco_Produto NUMERIC
-)
-    -- Tabela de Vendas
+);
+
+-- Tabela de Vendas
 -- Tabela de fatos que relaciona clientes e produtos, registrando cada transação.
 -- As relações com Clientes e Produtos são lógicas, mantidas pelos campos de ID.
 CREATE OR REPLACE TABLE `t1engenhariadados.turma3_grupo7.Vendas` (
@@ -31,7 +46,7 @@ CREATE OR REPLACE TABLE `t1engenhariadados.turma3_grupo7.Vendas` (
     ID_Produto INT64,
     Data_Venda DATE,
     Quantidade INT64
-)
+);
 
 -- Este script popula as tabelas criadas no BigQuery.
 -- A cláusula VALUES é usada para inserir múltiplas linhas de uma vez.
@@ -62,6 +77,11 @@ VALUES
     (5, 4, 101, '2024-02-20', 1),
     (6, 2, 104, '2024-03-05', 1);
 
+-- =============================================================================
+-- INSERÇÃO DE DADOS (POPULANDO AS TABELAS)
+-- Cada bloco de inserção corresponde à contribuição de um membro da equipe.
+-- =============================================================================
+
 --Chayenne
 -- Tabela de Clientes
 INSERT INTO `t1engenhariadados.turma3_grupo7.Clientes` (ID_Cliente, Nome_Cliente, Email_Cliente, Estado_Cliente)
@@ -89,8 +109,8 @@ VALUES
   (11, 8, 105, '2024-03-22', 1),
   (12, 6, 108, '2024-03-25', 1);
 
-  --Eduarda--
--- Inserção de dados na tabela Clientes (novos registros)
+--Eduarda
+-- Tabela de Clientes
 INSERT INTO `t1engenhariadados.turma3_grupo7.Clientes` (ID_Cliente, Nome_Cliente, Email_Cliente, Estado_Cliente)
 VALUES
     (9, 'Eduarda Martins', 'eduarda.m@email.com', 'BA'),
@@ -98,7 +118,7 @@ VALUES
     (11, 'Gabriela Lima', 'gabriela.l@email.com', 'PR'),
     (12, 'Henrique Alves', 'henrique.a@email.com', 'PE');
 
--- Inserção de dados na tabela Produtos (novos registros)
+-- Tabela Produtos 
 INSERT INTO `t1engenhariadados.turma3_grupo7.Produtos` (ID_Produto, Nome_Produto, Categoria_Produto, Preco_Produto)
 VALUES
     (109, 'Machine Learning Essencial', 'Dados', 95.00),
@@ -106,7 +126,7 @@ VALUES
     (111, 'Java para Iniciantes', 'Programação', 65.50),
     (112, 'Senhor dos Anéis', 'Fantasia', 120.00);
 
--- Inserção de dados na tabela Vendas (novos registros)
+-- Tabela Vendas
 INSERT INTO `t1engenhariadados.turma3_grupo7.Vendas` (ID_Venda, ID_Cliente, ID_Produto, Data_Venda, Quantidade)
 VALUES
     (13, 9, 109, '2024-03-12', 1),
@@ -115,9 +135,8 @@ VALUES
     (16, 12, 112, '2024-03-20', 1);
 
 
---Carol--
-
--- Clientes a partir do ID 13
+--Carol
+-- Tabela de Clientes
 INSERT INTO `t1engenhariadados.turma3_grupo7.Clientes` (ID_Cliente, Nome_Cliente, Email_Cliente, Estado_Cliente)
 VALUES
   (13, 'Diego Santos', 'diego.s@email.com', 'GO'),
@@ -125,7 +144,7 @@ VALUES
   (15, 'André Nascimento', 'andre.n@email.com', 'AM'),
   (16, 'Patrícia Mendes', 'patricia.m@email.com', 'SC');
 
--- Produtos a partir do ID 113
+-- Tabela de Produtos
 INSERT INTO `t1engenhariadados.turma3_grupo7.Produtos` (ID_Produto, Nome_Produto, Categoria_Produto, Preco_Produto)
 VALUES
   (113, 'Introdução ao Cloud Computing', 'Infraestrutura', 130.00),
@@ -133,7 +152,7 @@ VALUES
   (115, 'Fundamentos de Cibersegurança', 'Segurança', 140.00),
   (116, 'Banco de Dados NoSQL', 'Dados', 110.00);
 
--- Vendas a partir do ID 17
+-- Tabela Vendas
 INSERT INTO `t1engenhariadados.turma3_grupo7.Vendas` (ID_Venda, ID_Cliente, ID_Produto, Data_Venda, Quantidade)
 VALUES
   (17, 13, 113, '2024-04-15', 1),
@@ -141,15 +160,15 @@ VALUES
   (19, 15, 115, '2024-04-20', 1),
   (20, 16, 116, '2024-04-22', 1);
 
-  --Larissa--
--- Inserção de dados na tabela Clientes (novos registros)--
+--Larissa--
+--Tabela de Clientes 
 INSERT INTO `t1engenhariadados.turma3_grupo7.Clientes` (ID_Cliente, Nome_Cliente, Email_Cliente, Estado_Cliente)
 VALUES (17, 'Fernanda Lima', 'f.lima@email.com', 'PR'),
 (18, 'Gustavo Mendes', 'g.mendes@email.com', 'BA'),
 (19, 'Helena Costa', 'h.costa@email.com', 'MG'),
 (20, 'Isabel Moraes', 'i.moraes@email.com', 'SP'),
 
--- Inserção de dados na tabela Produtos (novos registros)--
+-- Tabela Produtos
 INSERT INTO `t1engenhariadados.turma3_grupo7.Produtos` (ID_Produto, Nome_Produto, Categoria_Produto, Preco_Produto)
 VALUES
 (117, 'O Senhor dos Anéis', 'Dados', 95.00),
@@ -157,7 +176,7 @@ VALUES
     (119, 'Data Visualization', 'Dados', 88.00),
     (120, 'A Revolução dos Bichos', 'Ficção Científica', 55.00);
 
--- Inserção de dados na tabela Vendas (novos registros)--
+-- Tabela de Vendas
 INSERT INTO `t1engenhariadados.turma3_grupo7.Vendas` (ID_Venda, ID_Cliente, ID_Produto, Data_Venda, Quantidade)
 VALUES
     (21, 1, 117, '2024-03-10', 1),
@@ -165,8 +184,8 @@ VALUES
     (23, 3, 119, '2024-03-22', 2),
     (24, 1, 120, '2024-03-28', 1),
 
--- Cardoso--
--- Tabela de Clientes --
+-- Cardoso
+-- Tabela de Clientes 
 INSERT INTO `t1engenhariadados.turma3_grupo7.Clientes` (ID_Cliente, Nome_Cliente, Email_Cliente, Estado_Cliente)
 VALUES
   (21, 'Eduardo Reis', 'edu.reis@email.com', 'SP'),
@@ -174,7 +193,7 @@ VALUES
   (23, 'Gustavo Nogueira', 'gustavo.n@email.com', 'RS'),
   (24, 'Helena Martins', 'helena.m@email.com', 'SC');
 
--- Tabela de Produtos --
+-- Tabela de Produtos 
 INSERT INTO `t1engenhariadados.turma3_grupo7.Produtos` (ID_Produto, Nome_Produto, Categoria_Produto, Preco_Produto)
 VALUES
 (121, 'Python para Iniciantes', 'Programação', 95.00),
@@ -182,7 +201,7 @@ VALUES
 (123, 'Senhor dos Anéis', 'Ficção Científica', 80.00),
 (124, 'Estatística Aplicada', 'Dados', 100.00);
 
--- Tabela de Vendas --
+-- Tabela de Vendas 
 INSERT INTO `t1engenhariadados.turma3_grupo7.Vendas` (ID_Venda, ID_Cliente, ID_Produto, Data_Venda, Quantidade)
 VALUES
 (25, 21, 108, '2024-03-28', 2),
