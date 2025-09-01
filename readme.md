@@ -73,4 +73,6 @@ Data de uso: vide  📁 notebooks/histórico_de_versões_projeto2_sql.jpeg
 A responsabilidade final pelo conteúdo, incluindo sua veracidade, adequação e uso, são dos autores que supervisionaram o processo: 
 
 vide 📁 notebooks/histórico_de_versões_projeto2_sql.jpeg
+### Referência completa: 
 
+GOOGLE. Desenvolvimento de um notebook em Colab para análise de dados com SQL e Python. Ferramenta de IA Gemini. 2025. Inteligência Artificial. Disponível em: https://g.co/gemini/share/a0601eec1bd5. Acesso em: 1 set. 2025.
