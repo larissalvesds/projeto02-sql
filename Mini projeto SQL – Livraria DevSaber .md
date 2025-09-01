@@ -14,6 +14,7 @@ Construímos todo o pipeline de dados: criamos a estrutura das tabelas, carregam
 
 - Google BigQuery / SQL queries de análise
 - PowerPoint para apresentação dos resultados
+- OpenAI - para a sugestão de dados dos clientes para teste 
 
 ### Projeto desenvolvido por:
 
