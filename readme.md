@@ -52,17 +52,17 @@ Com este mini data warehouse, a Livraria DevSaber passa a ter acesso facilitado 
 # 📢 Nota de Transparência
 Este conteúdo foi revisado e complementado com o auxílio de ferramentas de inteligência artificial, incluindo Microsoft Copilot, ChatGPT e Gemini, com supervisão humana.
 
-###2. Tipo de Assistência da IA exclusivamente nos conteúdos **complementares** *(não diretamente relacionados ao foco principal do projeto)*: Dados Adiconais, Notebook Colab, PowerPoint e Nota de Transparência.
+### 2. Tipo de Assistência da IA exclusivamente nos conteúdos **complementares** *(não diretamente relacionados ao foco principal do projeto)*: Dados Adiconais, Notebook Colab, PowerPoint e Nota de Transparência.
 **✍️ Criação:** Dados gerado diretamente pela IA com base em instruções fornecidas (ex.: ).
 **🧹 Revisão:** Conteúdo originalmente humano, revisado por IA para correção gramatical, clareza ou estilo.
 **🛠️ Adaptação:** Susgestões da IA para adequação do projeto.
 **➕ Complementação:** IA utilizada para adicionar informações, exemplos e tipos de visualização ao conteúdo original.
 
-###3. Data e Ferramenta Utilizada
+### 3. Data e Ferramenta Utilizada
 Ferramentas: Microsoft Copilot, ChatGPT e Gemini
 Data de uso: vide  📁 notebooks/histórico_de_versões_projeto2_sql.jpeg 
                     e https://github.com/cardoso20191/projeto02-sql/commits/main/
 
-###**✅ 4. Responsabilidade**
+### **✅ 4. Responsabilidade**
 A responsabilidade final pelo conteúdo, incluindo sua veracidade, adequação e uso, são dos autores que supervisionaram o processo: vide 📁 notebooks/histórico_de_versões_projeto2_sql.jpeg
 
